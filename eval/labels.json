@@ -1,0 +1,179 @@
+{
+  "version": "labels-v1",
+  "labeller": "AI assistant (candidate should verify each label)",
+  "selection_note": "14 sampled answers across aimode, chatgpt and gemini; branded and unbranded prompts; positive, negative, mention-only, absent and both citation-present and citation-absent cases. Two edge cases: a Gemini answer that discusses Kaspr instead of Kasparro, and a ChatGPT answer whose conditional 'considering Kasparro' wording is not a recommendation.",
+  "tuning": [
+    {
+      "response_id": "a3fdd8bb-bcd9-4608-9786-ad4b3a2c7dc2",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": false,
+        "negative": true
+      },
+      "note": "Branded prompt. Answer calls Kasparro not widely recognized or top-tier and asks for verifiable case studies."
+    },
+    {
+      "response_id": "50ea9a06-36e5-4c74-a6b6-25d981eec70a",
+      "labels": {
+        "absent": true,
+        "mentioned": false,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Unbranded prompt. Answer lists tracking methods and tools but never names Kasparro."
+    },
+    {
+      "response_id": "f5109b67-a854-4fa0-a05f-e9a88b5b3edb",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": true,
+        "negative": false
+      },
+      "note": "Branded prompt. Answer says yes, AI visibility is a core use case, while noting that no agency can guarantee citations."
+    },
+    {
+      "response_id": "0e2c8f07-c483-493d-a9fc-467efc857faa",
+      "labels": {
+        "absent": true,
+        "mentioned": false,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Unbranded prompt. Answer explains prompt tracking, share of voice and citation tracking without naming Kasparro."
+    },
+    {
+      "response_id": "b40168e8-acf4-4430-b22d-8c484fab846f",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": true,
+        "negative": false
+      },
+      "expected_citations": {"brand": 0},
+      "note": "Branded prompt. Answer describes Kasparro as designed to help and says teams guided by such tracking typically see improvements."
+    },
+    {
+      "response_id": "a6e9c6c4-1ac1-4f7f-bdc9-35ccca16ca7d",
+      "labels": {
+        "absent": true,
+        "mentioned": false,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Unbranded prompt. Answer covers AI visibility tools, manual audits and analytics without naming Kasparro."
+    },
+    {
+      "response_id": "08f81acc-0824-4e3a-a5d5-58446e2a6a90",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": false,
+        "negative": true
+      },
+      "expected_citations": {"brand": 1},
+      "note": "Citation-positive branded case. Answer is skeptical of Kasparro's unverified claims but links kasparro.com, showing that a citation is not a recommendation."
+    },
+    {
+      "response_id": "90b3eb79-cdf8-4fdb-ac9b-43089065a092",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": false,
+        "negative": false
+      },
+      "expected_citations": {"brand": 1},
+      "note": "Citation-positive branded case. Answer describes the four-module audit and links kasparro.com, but does not recommend it."
+    }
+  ],
+  "final": [
+    {
+      "response_id": "b7768287-1be1-4089-bbbd-c0908289b0b9",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": true,
+        "negative": false
+      },
+      "note": "Branded prompt. Answer calls tools like Kasparro useful for identifying trends, while warning that results are directional rather than guaranteed ROI."
+    },
+    {
+      "response_id": "91489c39-b122-4ac6-9702-f69600360658",
+      "labels": {
+        "absent": true,
+        "mentioned": false,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Unbranded prompt about alternatives to manual checks. Answer discusses evaluation frameworks and never names Kasparro."
+    },
+    {
+      "response_id": "9630ab41-2e94-4cfc-b22f-478264263a56",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Branded capability question. Answer confirms that Kasparro tracks ChatGPT and other engines but does not present it as a recommended choice."
+    },
+    {
+      "response_id": "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc",
+      "labels": {
+        "absent": false,
+        "mentioned": true,
+        "recommended": false,
+        "negative": true
+      },
+      "expected_citations": {"brand": 0},
+      "note": "Edge case: conditional consideration. Answer says Kasparro can help but doubts independent evidence and would be cautious, so it is mentioned and negative, not recommended.",
+      "edge_case": true
+    },
+    {
+      "response_id": "5beb2a32-6c6c-42d8-861c-9fc9680b9930",
+      "labels": {
+        "absent": true,
+        "mentioned": false,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Edge case: entity confusion. A branded Kasparro prompt is answered entirely about Kaspr, a different product, so the exact Kasparro name never appears.",
+      "edge_case": true
+    },
+    {
+      "response_id": "e2bb9e59-578d-474c-b7e1-ee8c29b36d90",
+      "labels": {
+        "absent": true,
+        "mentioned": false,
+        "recommended": false,
+        "negative": false
+      },
+      "note": "Unbranded prompt about skepticism. Answer discusses the category but never names Kasparro."
+    }
+  ],
+  "diagnostic_checks": [
+    {
+      "case_id": "supported-negative-excerpt",
+      "claim": "The diagnostic 2 negative excerpt appears verbatim in the saved answer",
+      "response_ids": [
+        "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc"
+      ],
+      "evidence_quotes": [
+        "However, I couldn't find independent evidence showing that Kasparro consistently delivers measurable improvements for B2B SaaS companies specifically."
+      ],
+      "expected_supported": true
+    },
+    {
+      "case_id": "unsupported-fabricated-excerpt",
+      "claim": "A fabricated quote must be rejected even when the response ID is valid",
+      "response_ids": [
+        "ac5bdf24-6a6e-49a0-abf5-2755ff3b42bc"
+      ],
+      "evidence_quotes": [
+        "Kasparro is the definitive market leader for every B2B SaaS category."
+      ],
+      "expected_supported": false
+    }
+  ]
+}

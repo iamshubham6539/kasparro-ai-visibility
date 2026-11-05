@@ -1,0 +1,49 @@
+KASPARRO AI ENGINEER ASSIGNMENT - SUBMISSION ARCHIVE
+Built: 2026-11-05
+
+This private archive contains the source, tests, evaluation harness, generated
+analysis output, decision note and the supplied input pack needed to run the
+project from this folder.
+
+Start here
+----------
+1. Read README.md for exact setup, start, test and evaluation commands.
+2. README.md and DECISION_NOTE.md describe the scoring, review gate and design
+   choices.
+3. The default execution mode is replay. It needs no model or API key.
+
+Included
+--------
+app.py, db.py, analyze.py, llm.py, evaluate.py, streamlit_app.py
+requirements.txt, .env.example, README.md, DECISION_NOTE.md
+tests/test_app.py
+eval/labels.json, eval/report.md, eval/review_sample.md
+results.json
+fixtures/failure_scenarios.json
+data/, schemas/, reference/, provenance/, tools/
+PACK_MANIFEST.json, START_HERE.txt, Assignment.pdf, Assignment.docx
+kasparro.db (optional pre-seeded convenience database; delete and rebuild it
+with the README initialisation command if you want a clean start)
+
+Quick check
+-----------
+python3 tools/check_pack.py
+python3 -m pytest -q
+python3 evaluate.py
+
+Active time
+-----------
+Approximately 5 hours.
+
+Disclosure
+----------
+The 14 evaluation labels were prepared with AI assistance. The candidate must
+verify every label in eval/review_sample.md before treating the labels as their
+own judgement. This is stated in DECISION_NOTE.md as well.
+
+Visibility
+----------
+The supplied input pack and generated outputs are included here because this is
+a private submission archive. Do not publish this archive or commit the supplied
+data or private outputs to public Git history. No credentials or API keys are
+included.

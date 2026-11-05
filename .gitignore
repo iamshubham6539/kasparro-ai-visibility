@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+.env
+
+# Generated analysis outputs: include these only in the private submission archive.
+results.json
+eval/report.md
+eval/review_sample.md
+
+# Supplied assignment pack: keep original inputs out of Git.
+data/
+reference/
+provenance/
+schemas/
+fixtures/
+tools/
+START_HERE.txt
+Assignment.pdf
+Assignment.docx
+PACK_MANIFEST.json
